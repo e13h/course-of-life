@@ -1,0 +1,14 @@
+<h1 mat-dialog-title>Add Work Experience</h1>
+<div mat-dialog-content>
+    <p>
+        <mat-form-field appearance="standard">
+            <mat-label>Job Title</mat-label>
+            <!-- <input matInput [(ngModel)]="workExperience.jobTitle" placeholder="Job Title"> -->
+            <input matInput placeholder="Input">
+        </mat-form-field>
+    </p>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onCancelClick()">Cancel</button>
+    <button mat-button [mat-dialog-close]="workExperience" cdkFocusInitial>Ok</button>
+</div>

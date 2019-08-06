@@ -8,13 +8,18 @@ import { ResumeComponent } from './resume/resume.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { SharedModule } from './shared.module';
 import { WorkExperienceComponent } from './work-experience/work-experience.component';
+import { AddExperienceDialogComponent } from './add-experience-dialog/add-experience-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ResumeComponent,
     TopBarComponent,
-    WorkExperienceComponent
+    WorkExperienceComponent,
+    AddExperienceDialogComponent
+  ],
+  entryComponents: [
+    AddExperienceDialogComponent
   ],
   imports: [
     BrowserAnimationsModule,
