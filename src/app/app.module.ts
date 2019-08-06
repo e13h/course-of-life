@@ -1,10 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ResumeComponent } from './resume/resume.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
+import { SharedModule } from './shared.module';
 
 @NgModule({
   declarations: [
@@ -13,8 +15,10 @@ import { TopBarComponent } from './top-bar/top-bar.component';
     TopBarComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
