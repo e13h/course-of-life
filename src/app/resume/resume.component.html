@@ -1,4 +1,8 @@
 <mat-card data-cy="resume">
+    <mat-card-header>
+        <div mat-card-avatar class="work-header-image"></div>
+        <mat-card-title>Work Experience</mat-card-title>
+    </mat-card-header>
     <mat-card-content>
         <mat-list data-cy="workExperiencesList">
             <mat-list-item *ngFor="let workExperience of workExperiences; index as i">
