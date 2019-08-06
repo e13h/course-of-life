@@ -62,7 +62,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "course-of-life:build"
+            "browserTarget": "course-of-life:build",
+            "port": 4200
           },
           "configurations": {
             "production": {
