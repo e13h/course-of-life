@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./work-experience.component.scss']
 })
 export class WorkExperienceComponent implements OnInit {
-
-  constructor() { }
+  constructor(private _jobTitle: string, private _description: string) { }
 
   ngOnInit() {
   }
+
+  get jobTitle() { return this._jobTitle; }
+  get description() { return this._description; }
 
 }
