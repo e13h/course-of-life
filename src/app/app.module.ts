@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { ResumeComponent } from './resume/resume.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { SharedModule } from './shared.module';
+import { WorkExperienceComponent } from './work-experience/work-experience.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ResumeComponent,
-    TopBarComponent
+    TopBarComponent,
+    WorkExperienceComponent
   ],
   imports: [
     BrowserAnimationsModule,
