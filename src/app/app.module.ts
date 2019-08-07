@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { ResumeComponent } from './resume/resume.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { SharedModule } from './shared/shared.module';
-import { WorkExperienceComponent } from './work-experience/work-experience.component';
 import { AddExperienceDialogComponent } from './add-experience-dialog/add-experience-dialog.component';
 import { WorkExperienceListComponent } from './work-experience-list/work-experience-list.component';
 
@@ -17,7 +16,6 @@ import { WorkExperienceListComponent } from './work-experience-list/work-experie
     AppComponent,
     ResumeComponent,
     TopBarComponent,
-    WorkExperienceComponent,
     AddExperienceDialogComponent,
     WorkExperienceListComponent
   ],
