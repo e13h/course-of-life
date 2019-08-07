@@ -31,5 +31,9 @@ export class WorkExperienceListComponent implements OnInit {
   ngOnInit() {
   }
 
+  trimDate(date: Date): string {
+    return date.toLocaleDateString();
+  }
+
   get isEditable() { return this._isEditable; }
 }

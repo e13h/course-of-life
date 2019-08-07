@@ -9,6 +9,7 @@
         <mat-list data-cy="workExperiencesList">
             <mat-list-item *ngFor="let workExperience of workExperiences; index as i">
                 <h3 matLine>{{ workExperience.jobTitle }}</h3>
+                <small matLine>{{ trimDate(workExperience.startDate) }} - {{ trimDate(workExperience.endDate) }}</small>
                 <p matLine>{{ workExperience.description }}</p>
                 <mat-divider [inset]="true" *ngIf="i < workExperiences.length - 1"></mat-divider>
             </mat-list-item>
