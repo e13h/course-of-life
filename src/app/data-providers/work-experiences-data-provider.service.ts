@@ -5,15 +5,24 @@ import { WorkExperience } from '../models/work-experience';
   providedIn: 'root'
 })
 export class WorkExperiencesDataProviderService {
-  private _defaultWorkExperiences = [
-    new WorkExperience('Software Engineer', 'Programmed in Angular at Motorola Solutions.'),
-    new WorkExperience('Bus Driver', 'Drove a school bus.'),
-  ];
+  private _defaultWorkExperiences = {
+    experiences: [
+      { jobTitle: 'Software Engineer', description: 'Programmed in Angular at Motorola Solutions.' },
+      { jobTitle: 'Bus Driver', description: 'Drove a school bus.' }
+    ]
+  };
   constructor() { }
 
   saveToServer(workExperiences: WorkExperience[]) { }
 
-  loadFromServer(): WorkExperience[] {
+  loadFromServer(): WorkExperiencesResponse {
     return this._defaultWorkExperiences;
   }
+}
+
+export interface WorkExperiencesResponse {
+  experiences: {
+    jobTitle: string,
+    description: string,
+  }[]
 }

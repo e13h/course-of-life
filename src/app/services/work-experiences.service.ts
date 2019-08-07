@@ -13,7 +13,11 @@ export class WorkExperiencesService {
   }
 
   getExperiences(): WorkExperience[] {
-    return this._dataProvider.loadFromServer();
+    let experiences = [];
+    this._dataProvider.loadFromServer().experiences.forEach(element => {
+      experiences.push(new WorkExperience(element.jobTitle, element.description));
+    });
+    return experiences;
   }
 
   saveExperiences(workExperiences: WorkExperience[]) {
