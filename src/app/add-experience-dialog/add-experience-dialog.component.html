@@ -19,6 +19,25 @@
                 </div>
             </form>
         </mat-step>
+        <mat-step [stepControl]="datepickerFormGroup">
+            <form [formGroup]="datepickerFormGroup">
+                <ng-template matStepLabel>Enter date range</ng-template>
+                <mat-form-field>
+                    <input matInput [matDatepicker]="startPicker" placeholder="Choose a start date" formControlName="startDatepickerCtrl" required>
+                    <mat-datepicker-toggle matSuffix [for]="startPicker"></mat-datepicker-toggle>
+                    <mat-datepicker #startPicker></mat-datepicker>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput [matDatepicker]="endPicker" placeholder="Choose an end date" formControlName="endDatepickerCtrl" required>
+                    <mat-datepicker-toggle matSuffix [for]="endPicker"></mat-datepicker-toggle>
+                    <mat-datepicker #endPicker></mat-datepicker>
+                </mat-form-field>
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
         <mat-step [stepControl]="descriptionFormGroup">
             <form [formGroup]="descriptionFormGroup">
                 <ng-template matStepLabel>Fill out description</ng-template>

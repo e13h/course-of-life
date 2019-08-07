@@ -11,6 +11,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class AddExperienceDialogComponent implements OnInit {
   titleFormGroup: FormGroup;
   descriptionFormGroup: FormGroup;
+  datepickerFormGroup: FormGroup;
 
   constructor(
     private _formBuilder: FormBuilder,
@@ -21,6 +22,10 @@ export class AddExperienceDialogComponent implements OnInit {
     this.titleFormGroup = this._formBuilder.group({
       jobTitleCtrl: [this.data.jobTitle, Validators.required]
     });
+    this.datepickerFormGroup = this._formBuilder.group({
+      startDatepickerCtrl: ['', Validators.required],
+      endDatepickerCtrl: ['', Validators.required]
+    })
     this.descriptionFormGroup = this._formBuilder.group({
       descriptionCtrl: [this.data.description, Validators.required]
     });
