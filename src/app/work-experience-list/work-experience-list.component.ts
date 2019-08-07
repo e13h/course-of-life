@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { WorkExperienceComponent } from '../work-experience/work-experience.component';
 import { WorkExperiencesService } from '../services/work-experiences.service';
 import { AddExperienceDialogComponent } from '../add-experience-dialog/add-experience-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
+import { WorkExperience } from '../models/work-experience';
 
 @Component({
   selector: 'app-work-experience-list',
@@ -10,7 +10,7 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./work-experience-list.component.scss']
 })
 export class WorkExperienceListComponent implements OnInit {
-  private _workExperiences: WorkExperienceComponent[];
+  private _workExperiences: WorkExperience[];
   
   constructor(_service: WorkExperiencesService, public dialog: MatDialog) {
     this._workExperiences = _service.getExperiences();

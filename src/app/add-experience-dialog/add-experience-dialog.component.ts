@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { WorkExperienceComponent } from '../work-experience/work-experience.component';
+import { WorkExperience } from '../models/work-experience';
 
 @Component({
   selector: 'app-add-experience-dialog',
@@ -8,7 +8,7 @@ import { WorkExperienceComponent } from '../work-experience/work-experience.comp
   styleUrls: ['./add-experience-dialog.component.scss']
 })
 export class AddExperienceDialogComponent {
-  private _workExperience = new WorkExperienceComponent("", "");
+  private _workExperience = new WorkExperience("", "");
 
   constructor(
     public dialogRef: MatDialogRef<AddExperienceDialogComponent>) { }

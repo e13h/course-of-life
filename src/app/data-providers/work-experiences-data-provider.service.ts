@@ -1,19 +1,19 @@
 import { Injectable } from '@angular/core';
-import { WorkExperienceComponent } from '../work-experience/work-experience.component';
+import { WorkExperience } from '../models/work-experience';
 
 @Injectable({
   providedIn: 'root'
 })
 export class WorkExperiencesDataProviderService {
   private _defaultWorkExperiences = [
-    new WorkExperienceComponent('Software Engineer', 'Programmed in Angular at Motorola Solutions.'),
-    new WorkExperienceComponent('Bus Driver', 'Drove a school bus.'),
+    new WorkExperience('Software Engineer', 'Programmed in Angular at Motorola Solutions.'),
+    new WorkExperience('Bus Driver', 'Drove a school bus.'),
   ];
   constructor() { }
 
-  saveToServer(workExperiences: WorkExperienceComponent[]) { }
+  saveToServer(workExperiences: WorkExperience[]) { }
 
-  loadFromServer(): WorkExperienceComponent[] {
+  loadFromServer(): WorkExperience[] {
     return this._defaultWorkExperiences;
   }
 }
