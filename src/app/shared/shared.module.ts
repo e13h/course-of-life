@@ -8,6 +8,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatStepperModule } from '@angular/material/stepper';
 
 @NgModule({
   imports: [
@@ -20,6 +21,7 @@ import { MatInputModule } from '@angular/material/input';
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
+    MatStepperModule,
   ],
   exports: [
     MatButtonModule,
@@ -31,6 +33,7 @@ import { MatInputModule } from '@angular/material/input';
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
+    MatStepperModule,
   ]
 })
 export class SharedModule { }
