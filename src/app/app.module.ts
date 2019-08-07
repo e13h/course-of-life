@@ -7,7 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ResumeComponent } from './resume/resume.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
-import { SharedModule } from './shared.module';
+import { SharedModule } from './shared/shared.module';
 import { WorkExperienceComponent } from './work-experience/work-experience.component';
 import { AddExperienceDialogComponent } from './add-experience-dialog/add-experience-dialog.component';
 
