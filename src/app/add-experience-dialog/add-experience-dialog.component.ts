@@ -31,6 +31,11 @@ export class AddExperienceDialogComponent implements OnInit {
     this.data.description = this.descriptionFormGroup.get('descriptionCtrl').value;
   }
 
+  onSelectionChange(event: any) {
+    this.data.jobTitle = this.titleFormGroup.get('jobTitleCtrl').value;
+    this.data.description = this.descriptionFormGroup.get('descriptionCtrl').value;
+  }
+
   onCancelClick(): void {
     this.dialogRef.close();
   }

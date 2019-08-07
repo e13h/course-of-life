@@ -5,7 +5,7 @@
     </button>
 </div>
 <div mat-dialog-content>
-    <mat-vertical-stepper [linear]="true" #stepper>
+    <mat-vertical-stepper [linear]="true" (selectionChange)="onSelectionChange($event)">
         <mat-step [stepControl]="titleFormGroup">
             <form [formGroup]="titleFormGroup">
                 <ng-template matStepLabel>Fill out details</ng-template>
@@ -28,9 +28,18 @@
                 </mat-form-field>
                 <div>
                     <button mat-button matStepperPrevious>Back</button>
-                    <button mat-button (click)="onSave()" [mat-dialog-close]="data">Save</button>
+                    <button mat-button matStepperNext>Next</button>
                 </div>
             </form>
+        </mat-step>
+        <mat-step>
+            <ng-template matStepLabel>Preview</ng-template>
+            <p>{{ data.jobTitle }}</p>
+            <p>{{ data.description }}</p>
+            <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button (click)="onSave()" [mat-dialog-close]="data">Save</button>
+            </div>
         </mat-step>
     </mat-vertical-stepper>
 </div>
