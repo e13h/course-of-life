@@ -34,8 +34,7 @@
         </mat-step>
         <mat-step>
             <ng-template matStepLabel>Preview</ng-template>
-            <p>{{ data.jobTitle }}</p>
-            <p>{{ data.description }}</p>
+            <app-work-experience-list [workExperiences]="getPreview()" [isEditable]=false></app-work-experience-list>
             <div>
                 <button mat-button matStepperPrevious>Back</button>
                 <button mat-button (click)="onSave()" [mat-dialog-close]="data">Save</button>

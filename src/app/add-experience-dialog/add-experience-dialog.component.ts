@@ -36,6 +36,10 @@ export class AddExperienceDialogComponent implements OnInit {
     this.data.description = this.descriptionFormGroup.get('descriptionCtrl').value;
   }
 
+  getPreview(): WorkExperience[] {
+    return [ this.data ];
+  }
+
   onCancelClick(): void {
     this.dialogRef.close();
   }

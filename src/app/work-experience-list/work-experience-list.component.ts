@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { WorkExperiencesService } from '../services/work-experiences.service';
 import { AddExperienceDialogComponent } from '../add-experience-dialog/add-experience-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
@@ -10,11 +10,10 @@ import { WorkExperience } from '../models/work-experience';
   styleUrls: ['./work-experience-list.component.scss']
 })
 export class WorkExperienceListComponent implements OnInit {
-  private _workExperiences: WorkExperience[];
+  @Input('workExperiences') private _workExperiences: WorkExperience[];
+  @Input('isEditable') private _isEditable: boolean;
   
-  constructor(_service: WorkExperiencesService, public dialog: MatDialog) {
-    this._workExperiences = _service.getExperiences();
-  }
+  constructor(public dialog: MatDialog) { }
 
   get workExperiences() { return this._workExperiences; }
 
@@ -32,4 +31,5 @@ export class WorkExperienceListComponent implements OnInit {
   ngOnInit() {
   }
 
+  get isEditable() { return this._isEditable; }
 }
