@@ -20,7 +20,7 @@ export class WorkExperienceListComponent implements OnInit {
   openDialogAddExperience(): void {
     const dialogRef = this.dialog.open(AddExperienceDialogComponent, {
       width: '550px',
-      data: new WorkExperience('', '')
+      data: new WorkExperience()
     });
 
     dialogRef.afterClosed().subscribe(result => {

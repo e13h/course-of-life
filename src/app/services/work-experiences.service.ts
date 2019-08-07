@@ -14,8 +14,8 @@ export class WorkExperiencesService {
 
   getExperiences(): WorkExperience[] {
     let experiences = [];
-    this._dataProvider.loadFromServer().experiences.forEach(element => {
-      experiences.push(new WorkExperience(element.jobTitle, element.description));
+    this._dataProvider.loadFromServer().experiences.forEach(experience => {
+      experiences.push(new WorkExperience(experience.jobTitle, experience.startDate, experience.endDate, experience.description));
     });
     return experiences;
   }
