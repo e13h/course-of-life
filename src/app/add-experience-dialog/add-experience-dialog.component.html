@@ -1,15 +1,36 @@
-<h1 mat-dialog-title>Add Work Experience</h1>
-<div mat-dialog-content>
-    <p>
-        <!-- TODO fix mat-form-field error that requires MatFormFieldControl -->
-        <mat-form-field appearance="standard">
-            <mat-label>Job Title</mat-label>
-            <!-- <input matInput [(ngModel)]="workExperience.jobTitle" placeholder="Job Title"> -->
-            <input matInput placeholder="Input">
-        </mat-form-field>
-    </p>
+<div id="header-container">
+    <h1 mat-dialog-title>Add Work Experience</h1>
+    <button mat-icon-button (click)="onCancelClick()" id="close-button">
+        <mat-icon>close</mat-icon>
+    </button>
 </div>
-<div mat-dialog-actions>
-    <button mat-button (click)="onCancelClick()">Cancel</button>
-    <button mat-button [mat-dialog-close]="workExperience" cdkFocusInitial>Ok</button>
+<div mat-dialog-content>
+    <mat-vertical-stepper [linear]="true" #stepper>
+        <mat-step [stepControl]="titleFormGroup">
+            <form [formGroup]="titleFormGroup">
+                <ng-template matStepLabel>Fill out details</ng-template>
+                <mat-form-field>
+                    <mat-label>Job Title</mat-label>
+                    <input matInput placeholder="Enter a job title" formControlName="jobTitleCtrl" required
+                        cdkFocusInitial>
+                </mat-form-field>
+                <div>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step [stepControl]="descriptionFormGroup">
+            <form [formGroup]="descriptionFormGroup">
+                <ng-template matStepLabel>Fill out description</ng-template>
+                <mat-form-field>
+                    <mat-label>Description</mat-label>
+                    <input matInput placeholder="Enter a description" formControlName="descriptionCtrl" required>
+                </mat-form-field>
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button (click)="onSave()" [mat-dialog-close]="data">Save</button>
+                </div>
+            </form>
+        </mat-step>
+    </mat-vertical-stepper>
 </div>

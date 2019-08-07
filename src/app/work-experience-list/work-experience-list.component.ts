@@ -19,10 +19,12 @@ export class WorkExperienceListComponent implements OnInit {
   get workExperiences() { return this._workExperiences; }
 
   openDialogAddExperience(): void {
-    const dialogRef = this.dialog.open(AddExperienceDialogComponent, { width: '550px' });
+    const dialogRef = this.dialog.open(AddExperienceDialogComponent, {
+      width: '550px',
+      data: new WorkExperience('', '')
+    });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('the dialog was closed');
       if (result != null)
         this._workExperiences.push(result);
     })
