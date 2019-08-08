@@ -17,7 +17,7 @@ export class WorkExperienceListComponent implements OnInit {
 
   get workExperiences() { return this._workExperiences; }
 
-  openDialogAddExperience(): void {
+  openAddExperienceDialog(): void {
     const dialogRef = this.dialog.open(AddExperienceDialogComponent, {
       width: '550px',
       data: new WorkExperience()
