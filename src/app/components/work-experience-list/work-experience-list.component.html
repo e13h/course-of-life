@@ -7,15 +7,10 @@
     </mat-card-header>
     <mat-card-content>
         <mat-list data-cy="workExperiencesList">
-            <mat-list-item *ngFor="let workExperience of workExperiences; index as i" id="work-experience-list-item">
-                <h3 matLine>{{ workExperience.jobTitle }}</h3>
-                <small matLine>{{ trimDate(workExperience.startDate) }} - {{ trimDate(workExperience.endDate) }}</small>
-                <p matLine>
-                    <!-- TODO fix the weird spacing here -->
-                    <span style="white-space: pre-wrap">{{ workExperience.description }}</span>
-                </p>
+            <div *ngFor="let workExperience of workExperiences; index as i" id="work-experience-list-item">
+                <app-work-experience [data]="workExperience"></app-work-experience>
                 <mat-divider [inset]="true" *ngIf="i < workExperiences.length - 1"></mat-divider>
-            </mat-list-item>
+            </div>
         </mat-list>
     </mat-card-content>
     <mat-card-actions>

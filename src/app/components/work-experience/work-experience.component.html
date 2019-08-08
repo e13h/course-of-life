@@ -1,1 +1,7 @@
-<p>work-experience works!</p>
+<mat-list-item>
+    <h3 matLine>{{ data.jobTitle }}</h3>
+    <small matLine> {{ trimDate(data.startDate) }} - {{ trimDate(data.endDate) }}</small>
+    <p matLine>
+        <span style="white-space: pre-wrap">{{ data.description }}</span>
+    </p>
+</mat-list-item>
