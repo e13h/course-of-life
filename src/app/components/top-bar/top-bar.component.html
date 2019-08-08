@@ -1,1 +1,20 @@
-<p>top-bar works!</p>
+<mat-toolbar class="app-navbar mat-elevation-z6" color="primary">
+    <a class="mat-button" href="/">
+        <button mat-flat-button color="primary">
+            <mat-icon id="logo">show_chart</mat-icon>
+            <span>Course of Life</span>
+        </button>
+    </a>
+    <a class="mat-button" href="/resume">
+        <button mat-raised-button color="primary">Resume</button>
+    </a>
+    <span class="top-bar-fill-remaining-space"></span>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="icon-button with a menu">
+        <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+            <span>Item</span>
+        </button>
+    </mat-menu>
+</mat-toolbar>

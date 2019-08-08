@@ -1,0 +1,15 @@
+.top-bar-fill-remaining-space {
+    flex: 1 1 auto;
+}
+
+.app-navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+#logo {
+    padding-right: 4pt;
+}
