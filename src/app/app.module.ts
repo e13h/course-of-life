@@ -11,6 +11,7 @@ import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { SharedModule } from './shared/shared.module';
 import { AddExperienceDialogComponent } from './components/add-experience-dialog/add-experience-dialog.component';
 import { WorkExperienceListComponent } from './components/work-experience-list/work-experience-list.component';
+import { WorkExperienceComponent } from './components/work-experience/work-experience.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { WorkExperienceListComponent } from './components/work-experience-list/w
     ResumeComponent,
     TopBarComponent,
     AddExperienceDialogComponent,
-    WorkExperienceListComponent
+    WorkExperienceListComponent,
+    WorkExperienceComponent
   ],
   entryComponents: [
     AddExperienceDialogComponent
