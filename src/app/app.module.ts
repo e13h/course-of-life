@@ -12,6 +12,7 @@ import { SharedModule } from './shared/shared.module';
 import { AddExperienceDialogComponent } from './components/add-experience-dialog/add-experience-dialog.component';
 import { WorkExperienceListComponent } from './components/work-experience-list/work-experience-list.component';
 import { WorkExperienceComponent } from './components/work-experience/work-experience.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { WorkExperienceComponent } from './components/work-experience/work-exper
     TopBarComponent,
     AddExperienceDialogComponent,
     WorkExperienceListComponent,
-    WorkExperienceComponent
+    WorkExperienceComponent,
+    LandingPageComponent
   ],
   entryComponents: [
     AddExperienceDialogComponent
