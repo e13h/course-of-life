@@ -6,11 +6,11 @@ import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ResumeComponent } from './resume/resume.component';
-import { TopBarComponent } from './top-bar/top-bar.component';
+import { ResumeComponent } from './components/resume/resume.component';
+import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { SharedModule } from './shared/shared.module';
-import { AddExperienceDialogComponent } from './add-experience-dialog/add-experience-dialog.component';
-import { WorkExperienceListComponent } from './work-experience-list/work-experience-list.component';
+import { AddExperienceDialogComponent } from './components/add-experience-dialog/add-experience-dialog.component';
+import { WorkExperienceListComponent } from './components/work-experience-list/work-experience-list.component';
 
 @NgModule({
   declarations: [

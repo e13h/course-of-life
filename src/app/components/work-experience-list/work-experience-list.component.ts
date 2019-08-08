@@ -1,8 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { WorkExperiencesService } from '../services/work-experiences.service';
+import { WorkExperiencesService } from '../../services/work-experiences.service';
 import { AddExperienceDialogComponent } from '../add-experience-dialog/add-experience-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
-import { WorkExperience } from '../models/work-experience';
+import { WorkExperience } from '../../models/work-experience';
 
 @Component({
   selector: 'app-work-experience-list',
