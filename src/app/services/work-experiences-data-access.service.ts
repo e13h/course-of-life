@@ -4,7 +4,7 @@ import { WorkExperience } from '../models/work-experience';
 @Injectable({
   providedIn: 'root'
 })
-export class WorkExperiencesDataProviderService {
+export class WorkExperiencesDataAccessService {
   private _defaultWorkExperiences = {
     experiences: [
       {

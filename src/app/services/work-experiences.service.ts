@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
-import { WorkExperiencesDataProviderService } from '../data-providers/work-experiences-data-provider.service';
+import { WorkExperiencesDataAccessService } from './work-experiences-data-access.service';
 import { WorkExperience } from '../models/work-experience';
 
 @Injectable({
   providedIn: 'root'
 })
 export class WorkExperiencesService {
-  private _dataProvider: WorkExperiencesDataProviderService;
+  private _dataProvider: WorkExperiencesDataAccessService;
 
   constructor() {
-    this._dataProvider = new WorkExperiencesDataProviderService();
+    this._dataProvider = new WorkExperiencesDataAccessService();
   }
 
   getExperiences(): WorkExperience[] {

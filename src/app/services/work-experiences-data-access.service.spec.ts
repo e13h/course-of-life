@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { WorkExperiencesDataProviderService } from './work-experiences-data-provider.service';
+import { WorkExperiencesDataAccessService } from './work-experiences-data-access.service';
 
 describe('WorkExperiencesDataProviderService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: WorkExperiencesDataProviderService = TestBed.get(WorkExperiencesDataProviderService);
+    const service: WorkExperiencesDataAccessService = TestBed.get(WorkExperiencesDataAccessService);
     expect(service).toBeTruthy();
   });
 });
