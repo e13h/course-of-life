@@ -12,34 +12,23 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material';
 
+const matModules = [
+  MatButtonModule,
+  MatCheckboxModule,
+  MatCardModule,
+  MatListModule,
+  MatDividerModule,
+  MatDialogModule,
+  MatIconModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatStepperModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+];
+
 @NgModule({
-  imports: [
-    MatButtonModule,
-    MatCheckboxModule,
-    MatCardModule,
-    MatListModule,
-    MatDividerModule,
-    MatDialogModule,
-    MatIconModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatStepperModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-  ],
-  exports: [
-    MatButtonModule,
-    MatCheckboxModule,
-    MatCardModule,
-    MatListModule,
-    MatDividerModule,
-    MatDialogModule,
-    MatIconModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatStepperModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-  ]
+  imports: [matModules],
+  exports: [matModules]
 })
 export class SharedModule { }
