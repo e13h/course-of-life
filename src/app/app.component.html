@@ -1,4 +1,6 @@
-<app-top-bar></app-top-bar>
-<div class="container">
-  <router-outlet></router-outlet>
+<div class="app-canvas" style="position: absolute; top: 100px;">
+  <app-top-bar class="app-top-bar"></app-top-bar>
+  <ng-container>
+    <router-outlet></router-outlet>
+  </ng-container>
 </div>
